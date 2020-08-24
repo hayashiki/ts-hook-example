@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {useForm} from "react-hook-form";
 
-function App() {
+export default function App() {
   const { register, handleSubmit, errors } = useForm()
   const onSubmit = (data: any) => console.log(data);
 
@@ -180,4 +180,4 @@ function App() {
   );
 }
 
-export default App;
+// export default App;
