@@ -19,7 +19,7 @@ export default function App() {
             <h3>Client Profile</h3>
         </div>
         <div className="col-sm-12">
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} data-testid="profile-form">
                 <div className="form-group">
                     <input
                         className="form-control"
@@ -70,6 +70,7 @@ export default function App() {
                         type="email"
                         placeholder="Email"
                         name="Email"
+                        data-testid="_emailInputTest"
                         ref={register({ required: true, pattern: /^\S+@\S+$/i })}
                     />
                     {errors.Email &&
@@ -171,7 +172,7 @@ export default function App() {
 
 
                 <div className="form-group">
-                    <input className="btn btn-primary" type="submit" />
+                    <input className="btn btn-primary" type="submit" data-testid="_saveButtonTest" />
                 </div>
             </form>
         </div>
